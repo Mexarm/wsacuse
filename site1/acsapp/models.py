@@ -55,3 +55,8 @@ class DocImage(models.Model):
     @property
     def download_url(self):
         return reverse('download', args=[self.uuid])
+
+    class Meta:
+        verbose_name = 'Acuse'
+        verbose_name_plural = 'Acuses'
+        ordering = ('-creation_date',)
